@@ -1,0 +1,517 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFAFA;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .page {
+    width: 100%;
+    min-height: 100%;
+    background-image: url(/img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .container {
+    max-width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* heading "main page" */
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  /* registration and entrance container */
+  /* .form-container {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  } */
+  
+  /* header registration, login */
+  .form-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* login field */
+  .login-input {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* password field */
+  .password-input {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* username field */
+  .name-input {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* button to register, log in */
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333; 
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  
+  /* have an account, don't have an account, log in, register have an account, don't have an account, log in, register */
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 30%;
+  }
+  
+  /* login and registration buttons on the main page */
+  .register-buttons {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px ;
+  }
+  
+  /* login button on the main page */
+  .login-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+    margin-right: 20px;
+  }
+  
+  .login-button:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  
+  /* a button to register on the main page */
+  .register-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  .register-button:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  
+  /* button to create a news item on the main screen */
+  .news-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+    width: 300px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .news-button:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  
+  /* exit button */
+  .logout-buttom {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+    position: absolute;
+    top: 60px;
+    left: 1400px;
+  }
+  
+  .logout-buttom:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  
+  /* greeting */
+  .vitaemo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* news creation title */
+  .title-news {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* news creation container */
+  .create-news-container {
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 25px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* news headline */
+  label.news-title {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Style for the news title text field (input[name="title"]) */
+  input[name="title"] {
+    /* width: 97%; */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for news text (label.news-text) */
+  label.news-text {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Style for the news text field (textarea[name="text"]) */
+  textarea[name="text"] {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* create news button */
+  button.create-news-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 90px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+    
+  }
+  
+  .create-news-button:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  
+  /*button to return to the main page */
+  .return-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  .return-button:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  
+  /* comment creation header */
+  .title-comment {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* container for creating comments */
+  .create-comment-container {
+    width: 700px;
+    margin-top: 25px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for comment-text field (label.comment-text) */
+  label.comment-text {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Style for the comment textarea[name="text"]) */
+  textarea[name="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* button to create a comment*/
+  .comment-button {
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 90px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  .comment-button:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  
+  /*news container on the main page */
+  .news-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  /* news headline on the main page */
+  .title-news-home {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* the text of the news on the main page */
+  .text-news-home {
+    color: #666;
+  }
+  
+  /* who is the author of the news on the main page*/
+  .author-home {
+    color: #999;
+  }
+  
+  /* no news message on the main page */
+  .no-news-home {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* a message that there are no comments on the news page */
+  .no-comment {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* "delete news" button on the news page */
+  .delete-news-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+    margin: 10px;
+  }
+  
+  .delete-news-button:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  
+  /* the "edit" button on the news page */
+  .edit-news-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  .edit-news-button:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  /* a button to leave a comment on the news page */
+  .leave-comment-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  .leave-comment-button:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  
+  /* "edit comment" button on the news page */
+  .edit-comment-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  .edit-comment-button:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  
+  /* "delete comment" button on the news page */
+  .delete-comment-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  .delete-comment-button:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
+  
+  /* the title of the edit comment/news on the edit comment/news page */
+  .edit_comment_news {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* text field on the edit comment/news page */
+  .text_edit_comment_news {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* the title field on the news edit page */
+  .label-news-title {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* button to save changes on the comment/news editing page */
+  .button_edit_comment_news {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  .button_edit_comment_news:hover {
+    background-color: #C0C0C0;
+    color: black;
+  }
