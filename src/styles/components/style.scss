@@ -9,7 +9,7 @@ body {
   .page {
     width: 100%;
     min-height: 100%;
-    background-image: url(/img/background.jpg);
+    background-image: url(../../img/background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,16 +33,6 @@ body {
     text-align: center;
   }
   
-  /* registration and entrance container */
-  /* .form-container {
-    width: 300px;
-    margin: 0 auto;
-    margin-top: 50px; 
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  } */
   
   /* header registration, login */
   .form-title {
@@ -104,14 +94,6 @@ body {
     border-radius: 30%;
   }
   
-  /* login and registration buttons on the main page */
-  .register-buttons {
-    display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px ;
-  }
-  
   /* login button on the main page */
   .login-button {
     background-color: #333;
@@ -130,22 +112,6 @@ body {
     color: black;
   }
   
-  /* a button to register on the main page */
-  .register-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: .3s;
-  }
-  
-  .register-button:hover {
-    background-color: #C0C0C0;
-    color: black;
-  }
   
   /* button to create a news item on the main screen */
   .news-button {
@@ -348,12 +314,7 @@ body {
     margin: 10px;
     background-color: #f9f9f9;
   }
-  
-  /* news headline on the main page */
-  .title-news-home {
-    color: #333;
-    text-decoration: none;
-  }
+
   
   /* the text of the news on the main page */
   .text-news-home {

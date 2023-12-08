@@ -1,24 +1,15 @@
-.form-wrapper {
+.form {
+  &-wrapper {
     padding: 20px;
     box-shadow: 0 0 20px #ccc;
     border-radius: 5px;
   }
-  
-  .form-item {
-    margin-bottom: 20px;
+
+  &-item {
+    margin-bottom: 10px;
   }
+}
   
-  .form-item__label {
-    display: block;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 5px;
-    font-size: 14px;
-  }
-  
-  .form-item__field {
-    width: 100%;
-  }
   
   .form-footer {
     display: flex;

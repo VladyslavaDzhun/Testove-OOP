@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url('../img/background.jpg') center no-repeat;
+  background-size: cover;
+
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.wrapper--lg {
+  max-width: 700px;
+}
+
+
+.title-md {
+  font-size: 26px;
+}
