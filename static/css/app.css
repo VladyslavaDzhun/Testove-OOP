@@ -2667,12 +2667,12 @@ textarea.form-control-lg {
   pointer-events: none;
   -webkit-filter: none;
           filter: none;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .form-check-input:disabled ~ .form-check-label, .form-check-input[disabled] ~ .form-check-label {
   cursor: default;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .form-switch {

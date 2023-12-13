@@ -7,7 +7,7 @@
 
   padding: 15px 25px;
   border-radius: 5px;
-  background: transparent;
+  // background: transparent;
   cursor: pointer;
   font-size: 16px;
 
@@ -29,7 +29,7 @@
   }
 
   &:hover {
-    opacity: 0.5;
+    opacity: 1;
   }
 
   &-primary {
@@ -48,7 +48,7 @@
 }
 
 .btn-link {
-  background: transparent;
+  // background: transparent;
   color: #202123;
   text-decoration: none;
   padding: 5px;
@@ -61,7 +61,7 @@
 
 .btn-stroke {
   border: 1px solid;
-  background: transparent !important;
+  // background: transparent !important;
 }
 
 .btn-sm {
@@ -91,12 +91,3 @@
     color: #f7ab3a;
   }
 }
-
-
-// .btn-info {
-//   background: #0f0;
-// }
-
-// :root {
-//   --bs-btn-bg: #f00;
-// }

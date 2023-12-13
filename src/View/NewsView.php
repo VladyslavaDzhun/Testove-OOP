@@ -37,8 +37,8 @@ class NewsView
       </div>
       <?php } else {?>
       <div class="text-center">
-        <a href="index.php?action=login" class="btn btn-info mx-1">Увійти</a>
-        <a href="index.php?action=register" class="btn btn-success mx-1">Зареєструватися</a>
+        <a href="index.php?action=login" class="btn btn-secondary mx-1">Увійти</a>
+        <a href="index.php?action=register" class="btn btn-secondary mx-1">Зареєструватися</a>
       </div>
       <?php }?>
       <h2 class="title-news">Новини</h2>
@@ -110,25 +110,31 @@ if (!empty($newsList)) {
 <?php
 
     }
-
-    public function renderSingleNews($news, $userModel)
+    public function renderHeader()
     {
         echo '<div class="page">';
         echo '<div class="container">';
+    }
+    public function renderFooter()
+    {
+        echo '</div>';
+        echo '</div>';
+
+    }
+    public function renderSingleNews($news, $userModel)
+    {
 
         echo '<h3>' . htmlentities($news['title'], ENT_QUOTES) . '</h3>';
         echo '<p>' . htmlentities($news['text'], ENT_QUOTES) . '</p>';
         echo '<p>Автор: ' . $news['author'] . '</p>';
         if ($userModel->isUserLoggedIn() && $userModel->isAuthor($_SESSION['user_id'], $news['author_id'])) {
             echo '<form method="post" action="index.php?action=delete_news">';
-            echo '<a href="index.php?action=edit_news&news_id=' . $news['id'] . '" class = "btn btn-info">Редагувати новину</a>';
+            echo '<a href="index.php?action=edit_news&news_id=' . $news['id'] . '" class = "btn btn-warning">Редагувати новину</a>';
             echo '<form method="post" action="index.php?action=delete_news">';
             echo '<input type="hidden" name="id" value=' . $news['id'] . ' required>';
             echo '<button type="submit" class="btn btn-danger mx-1">Видалити новину</button>';
 
             echo '</form>';
-            echo '</div>';
-            echo '</div>';
 
         }
 
@@ -196,8 +202,10 @@ if (!empty($commentList)) {
                 echo '<a href="index.php?action=edit_comment&comment_id=' . $comment['id'] . '" class ="btn btn-light">
                   Редагувати коментар
                   </a>';
-
+                echo '<form method="post" action="index.php?action=delete_comment">';
+                echo '<input type="hidden" name="id" value=' . $comment['id'] . ' required><br>';
                 echo '<button type="submit" class = "btn btn-danger mx-1">Видалити коментар</button>';
+                echo '</form>';
 
                 echo '</div>';
                 echo '</div>';
@@ -221,25 +229,21 @@ if (!empty($commentList)) {
 </head>
 
 <body>
-  <div class="page">
-    <div class="container">
-      <div class="my-5">
-        <h1 class="title title-md">Створення коментаря</h1>
-        <?php echo $message; ?>
-        <div class="form-wrapper">
-          <form method="post" action="index.php?action=create_comment&news_id=<?php echo $news_id; ?>">
-            <div class="form-item">
-              <label class="form-label">Текст коментаря:</label>
-              <textarea class="form-control" name="text" rows="4" required></textarea>
-            </div>
-
-            <div class="form-footer">
-              <button type="submit" class="btn btn-primary">Залишити коментар</button>
-              <a href="index.php?action=home" class="btn btn-link">На головну</a>
-            </div>
-          </form>
+  <div class="my-5">
+    <h1 class="title title-md">Створення коментаря</h1>
+    <?php echo $message; ?>
+    <div class="form-wrapper">
+      <form method="post" action="index.php?action=create_comment&news_id=<?php echo $news_id; ?>">
+        <div class="form-item">
+          <label class="form-label">Текст коментаря:</label>
+          <textarea class="form-control" name="text" rows="4" required></textarea>
         </div>
-      </div>
+
+        <div class="form-footer">
+          <button type="submit" class="btn btn-primary">Залишити коментар</button>
+          <a href="index.php?action=home" class="btn btn-link">На головну</a>
+        </div>
+      </form>
     </div>
   </div>
 </body>

@@ -64,7 +64,7 @@ class AuthView
   <div class="container">
     <div class="wrapper wrapper--lg">
       <h1 class="form-title">Реєстрація</h1>
-  
+
       <?php echo $message; ?>
       <div class="shadow-lg p-4 rounded">
         <form method="post" action="index.php?action=register">
@@ -72,17 +72,17 @@ class AuthView
             <label class="form-label">Ім'я:</label>
             <input type="text" name="name" class="form-control" required>
           </div>
-  
+
           <div class="form-item">
             <label class="form-label">Email:</label>
             <input type="email" name="email" class="form-control" required>
           </div>
-  
+
           <div class="form-item">
             <label class="form-label">Пароль:</label>
             <input type="password" name="password" class="form-control" required>
           </div>
-  
+
           <button type="submit" class="btn btn-success w-100 mt-2">Зареєструватися</button>
         </form>
       </div>
