@@ -18,8 +18,13 @@ class NewsView
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<?php
+session_start();
+        ?>
 
 <body>
   <div class="page">
@@ -29,6 +34,7 @@ class NewsView
       <p class="vitaemo">Вітаємо,
         <?php echo $_SESSION['user_name']; ?>!
       </p>
+      <script src="/main JS/script.js"></script>
       <div class="text-center my-2">
         <a href="index.php?action=create_news" class="btn btn-dark">Створити нову новину</a>
         <div class=mt-2>
