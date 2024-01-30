@@ -31,8 +31,10 @@ session_start();
     <div class="container">
       <h1 class="header">Головна сторінка</h1>
       <?php if (isset($_SESSION['user_id'])) {?>
-      <p class="vitaemo">Вітаємо,
-        <?php echo $_SESSION['user_name']; ?>!
+      <p class="js-welcome">Вітаємо,
+        <span class="js-welcome-name hidden">
+          <?php echo $_SESSION['user_name']; ?>
+        </span>
       </p>
       <script src="/main JS/script.js"></script>
       <div class="text-center my-2">
